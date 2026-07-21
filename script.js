@@ -61,10 +61,15 @@ let dark = true;
 themeBtn.addEventListener("click", () => {
 
     if (dark) {
-
-        document.querySelectorAll("nav ul li a").forEach(link=>{
+                document.querySelectorAll("nav ul li a").forEach(link=>{
     link.style.color="#000";
 });
+            document.querySelector(".hero-text p ").style.color = "#000";
+        document.querySelector(".about-container p").style.color = "#000";
+        document.querySelectorAll(".project-card p").forEach(item => {
+    item.style.color = "#000";
+});
+        document.querySelector("footer").style.color = "#f8fafc";
 
         document.body.style.background = "#f8fafc";
         document.body.style.color = "black";

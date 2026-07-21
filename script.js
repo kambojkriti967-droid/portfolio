@@ -62,6 +62,10 @@ themeBtn.addEventListener("click", () => {
 
     if (dark) {
 
+        document.querySelectorAll("nav ul li a").forEach(link=>{
+    link.style.color="#000";
+});
+
         document.body.style.background = "#f8fafc";
         document.body.style.color = "black";
 

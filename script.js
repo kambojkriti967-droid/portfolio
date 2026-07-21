@@ -63,12 +63,12 @@ themeBtn.addEventListener("click", () => {
     if (dark) {
 
         document.body.style.background = "#f8fafc";
-        document.body.style.color = "#111";
+        document.body.style.color = "black";
 
         document.querySelectorAll(".card,.project-card,input,textarea")
             .forEach(item => {
                 item.style.background = "#ffffff";
-                item.style.color = "#111";
+                item.style.color = "black";
             });
 
         document.querySelector("header").style.background = "#ffffff";

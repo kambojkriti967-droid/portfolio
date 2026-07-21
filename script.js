@@ -64,6 +64,10 @@ themeBtn.addEventListener("click", () => {
                 document.querySelectorAll("nav ul li a").forEach(link=>{
     link.style.color="#000";
 });
+
+          document.body.style.background = "#f8fafc";
+        document.body.style.color = "#000";
+
             document.querySelector(".hero-text p ").style.color = "#000";
         document.querySelector(".about-container p").style.color = "#000";
         document.querySelectorAll(".project-card p").forEach(item => {
@@ -71,9 +75,7 @@ themeBtn.addEventListener("click", () => {
 });
         document.querySelector("footer").style.color = "#f8fafc";
 
-        document.body.style.background = "#f8fafc";
-        document.body.style.color = "#000";
-
+      
         document.querySelectorAll(".card,.project-card,input,textarea")
             .forEach(item => {
                 item.style.background = "#ffffff";

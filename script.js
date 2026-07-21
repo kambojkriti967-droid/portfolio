@@ -54,32 +54,50 @@ typeEffect();
 // Dark / Light Mode
 // ===============================
 
-const themeBtn = document.getElementById("theme-btn");
+       const themeBtn = document.getElementById("theme-btn");
+
+let dark = true;
 
 themeBtn.addEventListener("click", () => {
 
-    if(document.body.classList.contains("dark-mode")){
+    if (dark) {
 
-        document.body.classList.remove("dark-mode");
-        document.body.classList.add("light-mode");
+        document.body.style.background = "#f8fafc";
+        document.body.style.color = "#111";
 
-        themeBtn.innerHTML =
-        '<i class="fa-solid fa-sun"></i>';
+        document.querySelectorAll(".card,.project-card,input,textarea")
+            .forEach(item => {
+                item.style.background = "#ffffff";
+                item.style.color = "#111";
+            });
 
-    }
+        document.querySelector("header").style.background = "#ffffff";
 
-    else{
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
 
-        document.body.classList.remove("light-mode");
-        document.body.classList.add("dark-mode");
+        dark = false;
 
-        themeBtn.innerHTML =
-        '<i class="fa-solid fa-moon"></i>';
+    } else {
+
+        document.body.style.background = "#0f172a";
+        document.body.style.color = "#ffffff";
+
+             document.querySelectorAll(".card,.project-card,input,textarea")
+            .forEach(item => {
+                item.style.background = "#1e293b";
+                item.style.color = "#ffffff";
+            });
+
+        document.querySelector("header").style.background = "#111827";
+
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+
+        dark = true;
 
     }
 
 });
-       
+
 
        
 

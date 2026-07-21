@@ -72,12 +72,12 @@ themeBtn.addEventListener("click", () => {
         document.querySelector("footer").style.color = "#f8fafc";
 
         document.body.style.background = "#f8fafc";
-        document.body.style.color = "black";
+        document.body.style.color = "#000";
 
         document.querySelectorAll(".card,.project-card,input,textarea")
             .forEach(item => {
                 item.style.background = "#ffffff";
-                item.style.color = "black";
+                item.style.color = "#000";
             });
 
         document.querySelector("header").style.background = "#ffffff";

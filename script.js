@@ -56,59 +56,32 @@ typeEffect();
 
 const themeBtn = document.getElementById("theme-btn");
 
-let dark = true;
-
 themeBtn.addEventListener("click", () => {
 
-    if (dark) {
-                document.querySelectorAll("nav ul li a").forEach(link=>{
-    link.style.color="#000";
-});
+    if(document.body.classList.contains("dark-mode")){
 
-          document.body.style.background = "#f8fafc";
-        document.body.style.color = "#000";
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
 
-            document.querySelector(".hero-text p ").style.color = "#000";
-        document.querySelector(".about-container p").style.color = "#000";
-        document.querySelectorAll(".project-card p").forEach(item => {
-    item.style.color = "#000";
-});
-        document.querySelector("footer").style.color = "#f8fafc";
+        themeBtn.innerHTML =
+        '<i class="fa-solid fa-sun"></i>';
 
-      
-        document.querySelectorAll(".card,.project-card,input,textarea")
-            .forEach(item => {
-                item.style.background = "#ffffff";
-                item.style.color = "#000";
-            });
+    }
 
-        document.querySelector("header").style.background = "#ffffff";
+    else{
 
-        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
 
-        dark = false;
-
-    } else {
-
-        document.body.style.background = "#0f172a";
-        document.body.style.color = "#ffffff";
-
-        document.querySelectorAll(".card,.project-card,input,textarea")
-            .forEach(item => {
-                item.style.background = "#1e293b";
-                item.style.color = "#ffffff";
-            });
-
-        document.querySelector("header").style.background = "#111827";
-
-        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-
-        dark = true;
+        themeBtn.innerHTML =
+        '<i class="fa-solid fa-moon"></i>';
 
     }
 
 });
+       
 
+       
 
 // ===============================
 // Scroll Animation
